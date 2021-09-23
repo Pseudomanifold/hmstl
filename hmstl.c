@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 #ifndef S_SPLINT_S
 #include <unistd.h>

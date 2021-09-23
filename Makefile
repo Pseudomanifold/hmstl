@@ -1,7 +1,7 @@
 .PHONY: test clean
 
 hmstl: hmstl.c heightmap.c heightmap.h stb_image.o
-	gcc hmstl.c heightmap.c stb_image.o -o hmstl -ltrix -lm -L/usr/local/lib -Wl,-R/usr/local/lib
+	gcc -I../libtrix -L. hmstl.c heightmap.c stb_image.o -o hmstl -ltrix -lm -L/usr/local/lib -Wl
 
 stb_image.o: stb_image.c stb_image.h
 	gcc -c stb_image.c -o stb_image.o
